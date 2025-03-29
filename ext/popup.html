@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Security Checker</title>
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            width: 320px;
+            height: auto;
+            background: #c3cfe2; /* Matches the end of your gradient */
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            width: 320px;
+            min-height: 200px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 40px; /* Large radius for a prominent curve */
+            overflow: hidden; /* Clips content to the curve */
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            background: inherit; /* Matches body’s gradient */
+            border-radius: 40px; /* Aligns with body’s curve */
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            padding: 5px;
+            background: white;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        #status {
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+
+        #details {
+            font-size: 14px;
+            color: #666;
+            margin: 0 0 10px 0;
+            padding: 0 20px;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .secure {
+            color: #27ae60;
+            background: #e8f5e9;
+            border: 1px solid #27ae60;
+        }
+
+        .not-secure {
+            color: #c0392b;
+            background: #ffebee;
+            border: 1px solid #c0392b;
+        }
+
+        .suspicious {
+            color: #e67e22;
+            background: #fff3e0;
+            border: 1px solid #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="icon.png" alt="Security Checker Icon">
+        <h2>Website Security Status</h2>
+        <p id="status">Analyzing...</p>
+        <p id="details"></p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

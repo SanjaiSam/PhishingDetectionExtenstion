@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Website Security Checker",
+    "version": "1.1",
+    "description": "Checks if a website is secure, flagged for phishing, has SSL issues, or a bad reputation.",
+    "permissions": ["tabs", "activeTab"],
+    "host_permissions": [
+        "https://safebrowsing.googleapis.com/*",
+        "https://openphish.com/*",
+        "https://api.ssllabs.com/*",
+        "https://dns.google/*",
+        "https://api.abuseipdb.com/*",
+        "<all_urls>"
+    ],
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    }
+}
